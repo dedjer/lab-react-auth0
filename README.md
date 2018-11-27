@@ -1,3 +1,7 @@
+## Based on this Auth0 Article
+
+https://auth0.com/blog/react-tutorial-building-and-securing-your-first-app/
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
