@@ -10,18 +10,18 @@ import loading from "./loading.svg";
 //handleAuthentication process. In the meantime, this component shows the
 //following message: "Loading profile".
 class Callback extends Component {
-	async componentDidMount() {
-		await auth0Client.handleAuthentication();
-		this.props.history.replace("/home");
-	}
+  async componentDidMount() {
+    await auth0Client.handleAuthentication();
+    this.props.history.replace("/login");
+  }
 
-	render() {
-		return (
-			<div>
-				<img src={loading} alt="loading" />
-			</div>
-		);
-	}
+  render() {
+    return (
+      <div>
+        <img src={loading} alt="loading" />
+      </div>
+    );
+  }
 }
 
 export default withRouter(Callback);

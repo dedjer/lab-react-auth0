@@ -1,4 +1,4 @@
-## Based on this Auth0 Article
+## Based on this Auth0 Article, but working with newer version of react-router-4
 
 https://auth0.com/blog/react-tutorial-building-and-securing-your-first-app/
 
