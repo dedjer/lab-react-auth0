@@ -24,3 +24,5 @@ yarn-error.log*
 
 # auth
 /src/auth0-variables.js
+
+.vscode/*
