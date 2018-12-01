@@ -1,16 +1,9 @@
-// TODO: Pass authentication to Spring Boot Rest API
+import axios from "axios";
+import auth0Client from "./Auth";
 
-// async submit() {
-//     this.setState({
-//       disabled: true,
-//     });
-
-//     await axios.post('http://localhost:8081', {
-//       title: this.state.title,
-//       description: this.state.description,
-//     }, {
-//       headers: { 'Authorization': `Bearer ${auth0Client.getIdToken()}` }
-//     });
-
-//     this.props.history.push('/');
-//   }
+export async function getResponse() {
+  const response = await axios.get("http://localhost:8080/api/private", {
+    headers: { Authorization: `Bearer ${auth0Client.getAccessToken()}` }
+  });
+  return await response;
+}

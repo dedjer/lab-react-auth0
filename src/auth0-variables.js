@@ -1,4 +1,4 @@
 export const AUTH_CONFIG = {
   domain: "vehicle-history.auth0.com",
-  clientID: "vil1rVNGCL4R6HP3rFOAoQNvJjhZS7lD"
+  clientID: "WtDiWCAFhXezv5wY2QY8eAoGUf9KHfrg"
 };

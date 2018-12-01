@@ -2,6 +2,14 @@
 
 https://auth0.com/blog/react-tutorial-building-and-securing-your-first-app/
 
+--
+**NOTES:**
+
+- clientID used must be the "Machine to Machine" clientID in order for authentication to occur with REST API. Using the Single Page Application Client ID will not work with the REST API
+- The token used for headers>authorization>bearer is the access_token, not the id_token
+- Audience must be passed from the client to the Auth0 service because it's used when generating the access_token
+
+--
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

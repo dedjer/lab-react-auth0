@@ -56,15 +56,29 @@ class NavBar extends React.Component {
                   <NavLink>Secured</NavLink>
                 </LinkContainer>
               )}
+              {auth0Client.isAuthenticated() && (
+                <LinkContainer to="/private">
+                  <NavLink>Private</NavLink>
+                </LinkContainer>
+              )}
               {!auth0Client.isAuthenticated() && (
                 <LinkContainer onClick={auth0Client.login} to="/login">
                   <NavLink>Login</NavLink>
                 </LinkContainer>
               )}
               {auth0Client.isAuthenticated() && (
-                <LinkContainer onClick={this.signOut} to="/logout">
-                  <NavLink>Logout</NavLink>
-                </LinkContainer>
+                <React.Fragment>
+                  <LinkContainer onClick={this.signOut} to="/logout">
+                    <NavLink>Logout</NavLink>
+                  </LinkContainer>
+                  <a
+                    class="nav-link"
+                    href="https://vehicle-history.auth0.com/v2/logout"
+                    onClick={this.signOut}
+                  >
+                    Logout Auth0
+                  </a>
+                </React.Fragment>
               )}
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>
