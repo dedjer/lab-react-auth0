@@ -21,7 +21,7 @@ import auth0Client from "./Auth";
 class NavBar extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { isLoggedOut: false, isOpen: false };
+    this.state = { isOpen: false };
     this.signOut = this.signOut.bind(this);
     this.toggle = this.toggle.bind(this);
   }

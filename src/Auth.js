@@ -33,6 +33,7 @@ class Auth {
   }
   //This method returns the profile of the authenticated user, if any.
   // getProfile() {
+  //https://auth0.com/docs/quickstart/spa/vanillajs/02-user-profile
   // 	return this.profile;
   // }
 
